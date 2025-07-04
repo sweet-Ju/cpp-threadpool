@@ -10,6 +10,7 @@
 #include <functional>
 #include <memory>
 #include <chrono>
+#include <Logger.h>
 const auto IDLE_TIMEOUT = std::chrono::seconds(30);
 class ThreadPool
 {
@@ -41,6 +42,7 @@ template <class F,class ...Args>
         {
             std::lock_guard<std::mutex> lock(mutex_);
             tasks.emplace([task](){(*task)();});
+            LOG_INFO("Tasks num : "+std::to_string(tasks.size())+"  Threads num: "+std::to_string(threads.size()));
             if(tasks.size()>idleThread&&currentThread<MAX_THREADS)
             {
                 addThread();
