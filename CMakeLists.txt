@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # 添加 thread pool 库
 add_library(ThreadPool STATIC
     src/ThreadPool.cpp
+    src/Logger.cpp
 )
 
 target_include_directories(ThreadPool
