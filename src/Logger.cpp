@@ -16,7 +16,7 @@ Logger::~Logger()
 }
 void Logger::log(LogLevel level, const char* file, int line,const char* func,const std::string& msg)
 {
-    //auto& logger = Logger::getInstance();
+    if(level<=Logger::getInstance().currentLevel)return;
     if (!Logger::getInstance().log_file_.is_open()) {
         if (Logger::getInstance().log_path_.empty()) {
             Logger::getInstance().log_path_ = "default.log";  // 使用默认路径
