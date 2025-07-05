@@ -29,7 +29,7 @@ private:
     std::mutex log_mutex_; 
     bool initialized_ = false;
     std::string log_path_;
-    LogLevel currentLevel = DEBUG;
+    LogLevel currentLevel = LogLevel::DEBUG;
 private:
     Logger()= default;
     ~Logger();
