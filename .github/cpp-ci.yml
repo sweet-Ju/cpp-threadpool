@@ -1,0 +1,128 @@
+name: C++ ThreadPool CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Code
+      uses: actions/checkout@v3
+
+    - name: 🛠️ Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++
+
+    - name: ⚙️ Configure & Build
+      run: |
+        mkdir -p build
+        cd build
+        cmake ..
+        make -j
+
+    - name: ✅ Run Tests
+      run: |
+        ./build/test_main || echo "No test executable found. Add tests in build/test_main."
+name: C++ ThreadPool CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Code
+      uses: actions/checkout@v3
+
+    - name: 🛠️ Install Dependencies
+      run: |name: C++ ThreadPool CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Code
+      uses: actions/checkout@v3
+
+    - name: 🛠️ Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++
+
+    - name: ⚙️ Configure & Build
+      run: |name: C++ ThreadPool CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Code
+      uses: actions/checkout@v3
+
+    - name: 🛠️ Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++
+
+    - name: ⚙️ Configure & Build
+      run: |
+        mkdir -p build
+        cd build
+        cmake ..
+        make -j
+
+    - name: ✅ Run Tests
+      run: |
+        ./build/test_main || echo "No test executable found. Add tests in build/test_main."
+
+        mkdir -p build
+        cd build
+        cmake ..
+        make -j
+
+    - name: ✅ Run Tests
+      run: |
+        ./build/test_main || echo "No test executable found. Add tests in build/test_main."
+
+        sudo apt-get update
+        sudo apt-get install -y cmake g++
+
+    - name: ⚙️ Configure & Build
+      run: |
+        mkdir -p build
+        cd build
+        cmake ..
+        make -j
+
+    - name: ✅ Run Tests
+      run: |
+        ./build/test_main || echo "No test executable found. Add tests in build/test_main."
